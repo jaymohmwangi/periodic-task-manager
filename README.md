@@ -25,9 +25,18 @@ Install dependencies using Composer:
 composer install --no-dev --optimize-autoloader
 ```
 
-Copy the .env.example file to .env and update the database connection details:
+Copy the .env.example file to .env 
 ```bash
 cp .env.example .env
+```
+Update the database connection env variables:
+```bash
+DB_CONNECTION=pgsql
+DB_HOST=
+DB_PORT=25060
+DB_DATABASE=
+DB_USERNAME=
+DB_PASSWORD=
 ```
 Generate a new application key:
 ```bash
@@ -65,7 +74,7 @@ Test For TaskGroupServiceTest Include:
   - ✓ get all task groups
   - ✓ get task group by id
 
-Running the App
+## Running the App
 Start the app using the built-in PHP web server:
 ```bash
 php artisan serve --env=production
