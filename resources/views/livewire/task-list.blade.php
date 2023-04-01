@@ -174,6 +174,7 @@
         </div>
     </div>
 <script>
+
     //open create task group modal
     function openCreateTaskGroupModal() {
         var modal = document.getElementById("createTaskGroupModal");
