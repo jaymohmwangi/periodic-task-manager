@@ -174,11 +174,12 @@
         </div>
     </div>
 <script>
+    //open create task group modal
     function openCreateTaskGroupModal() {
         var modal = document.getElementById("createTaskGroupModal");
         modal.classList.remove("hidden");
     }
-
+    //close create task group modal
     function closeCreateTaskGroupModal() {
         var modal = document.getElementById("createTaskGroupModal");
         modal.classList.add("hidden");
