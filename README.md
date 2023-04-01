@@ -1,2 +1,77 @@
 # periodic-task-manager
- periodic-task-manager is web app that allows users to create periodic tasks that repeat at regular intervals. Tasks can be daily, weekly, monthly, or yearly
+
+## How to Run periodic-task-manager on Production
+
+This guide will walk you through the steps required to set up and run a periodic-task-manager app on a production environment. This app allows users to create periodic tasks and manage them, defining their frequency and duration, and grouping them into task groups. It also displays pending tasks in a list organized by date, allowing users to mark them as completed. The app is built with Laravel, Livewire, and Tailwind.
+
+## Prerequisites
+Before you begin, make sure you have the following:
+
+- A web server (e.g., Apache, Nginx)
+- PHP 7.3 or later
+- Composer
+- MySQL or another supported database
+
+## Installation
+
+Clone the repository to your web server:
+```bash
+  git clone https://github.com/jaymohmwangi/periodic-task-manager.git
+  cd periodic-task-manager
+```
+
+Install dependencies using Composer:
+```bash
+composer install --no-dev --optimize-autoloader
+```
+
+Copy the .env.example file to .env and update the database connection details:
+```bash
+cp .env.example .env
+```
+Generate a new application key:
+```bash
+php artisan key:generate
+```
+Run database migrations and seed the database:
+```bash
+php artisan migrate --seed
+```
+
+## Running Unit Tests
+Ensure that PHPUnit is installed on your system. If not, you can install it using Composer:
+```bash
+composer require --dev phpunit/phpunit
+```
+Run the unit tests:
+```bash
+php artisan test --filter TaskServiceTest
+```
+Test For TaskServiceTest Include:
+  - ✓ create task
+  - ✓ update task
+  - ✓ task find by id
+  - ✓ get all tasks
+  - ✓ delete task
+  - ✓ it determines task time group based on due date
+  - ✓ it marks task as completed and recreates task based on frequency
+  - ✓ get due date
+  
+php artisan test --filter TaskGroupServiceTest
+Test For TaskGroupServiceTest Include:
+  - ✓ create task group
+  - ✓ update task group
+  - ✓ delete task group
+  - ✓ get all task groups
+  - ✓ get task group by id
+
+Running the App
+Start the app using the built-in PHP web server:
+```bash
+php artisan serve --env=production
+```
+Open the app in your browser:
+```bash
+http://localhost:8000
+```
+Congratulations! You have successfully set up and run a Laravel Jetstream app on a production environment.
