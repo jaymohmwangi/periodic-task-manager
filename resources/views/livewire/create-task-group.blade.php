@@ -58,12 +58,6 @@
                 <x-jet-input-error for="description" class="mt-2" />
             </div>
         </div>
-           <!-- Submit button-->
-{{--        <div class="mt-6">--}}
-{{--            <x-jet-button class="ml-2" wire:click="createTaskGroup" wire:loading.attr="disabled">--}}
-{{--                Create--}}
-{{--            </x-jet-button>--}}
-{{--        </div>--}}
     <!-- Submit button  -->
     <div class="mt-6">
         <div class="flex sm:justify-start">
