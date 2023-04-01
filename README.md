@@ -66,7 +66,9 @@ Test For TaskServiceTest Include:
   - ✓ it marks task as completed and recreates task based on frequency
   - ✓ get due date
   
+```bash
 php artisan test --filter TaskGroupServiceTest
+```
 Test For TaskGroupServiceTest Include:
   - ✓ create task group
   - ✓ update task group
