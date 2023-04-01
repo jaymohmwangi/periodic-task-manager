@@ -10,7 +10,7 @@ Before you begin, make sure you have the following:
 - A web server (e.g., Apache, Nginx)
 - PHP 7.3 or later
 - Composer
-- MySQL or another supported database
+- PostgresQL or another supported database
 
 ## Installation
 
