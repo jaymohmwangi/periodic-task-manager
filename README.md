@@ -10,7 +10,7 @@ Before you begin, make sure you have the following:
 - A web server (e.g., Apache, Nginx)
 - PHP 7.3 or later
 - Composer
-- MySQL or another supported database
+- PostgresQL or another supported database
 
 ## Installation
 
@@ -22,7 +22,7 @@ Clone the repository to your web server:
 
 Install dependencies using Composer:
 ```bash
-composer install --no-dev --optimize-autoloader
+composer install  --optimize-autoloader
 ```
 
 Copy the .env.example file to .env 
@@ -53,6 +53,7 @@ Ensure that PHPUnit is installed on your system. If not, you can install it usin
 composer require --dev phpunit/phpunit
 ```
 Run the unit tests:
+Run Test for Task Service
 ```bash
 php artisan test --filter TaskServiceTest
 ```
@@ -65,8 +66,11 @@ Test For TaskServiceTest Include:
   - ✓ it determines task time group based on due date
   - ✓ it marks task as completed and recreates task based on frequency
   - ✓ get due date
-  
+
+Run Test for Task Group Service
+```bash
 php artisan test --filter TaskGroupServiceTest
+```
 Test For TaskGroupServiceTest Include:
   - ✓ create task group
   - ✓ update task group
@@ -74,6 +78,14 @@ Test For TaskGroupServiceTest Include:
   - ✓ get all task groups
   - ✓ get task group by id
 
+You can clear all test data from your database by running:
+```bash
+php artisan migrate:fresh
+```
+To create default users in the database, you can run:
+```bash
+php artisan db:seed
+```
 ## Running the App
 Start the app using the built-in PHP web server:
 ```bash
