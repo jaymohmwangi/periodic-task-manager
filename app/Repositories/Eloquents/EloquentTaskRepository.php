@@ -71,7 +71,7 @@ class EloquentTaskRepository extends EloquentBaseRepository implements TaskRepos
      */
     public function getPendingTasks(): \Illuminate\Database\Eloquent\Collection
     {
-        return $this->model->where('completed', false)
+        return $this->model->with('taskGroup')->where('completed', false)
             ->where('user_id', auth()->id())
             ->where('due_date', '>=', now()->startOfDay())
             ->orderBy('due_date', 'asc')

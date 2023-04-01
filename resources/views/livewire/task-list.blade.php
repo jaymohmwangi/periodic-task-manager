@@ -104,16 +104,22 @@
                                                                     <h1 class="font-semibold font-medium ">{{ $task->name??"" }}</h1>
                                                                     <p class="text-sm ring-gray-300"> {{ $task->description??"" }}</p>
                                                                 </td>
-                                                                {{--                                                                <!-- Column -->--}}
-                                                                {{--                                                                <td class="px-4 py-1 whitespace-nowrap text-left">--}}
-                                                                {{--                                                                <span class="p-2 inline-flex items-center px-2.5 py-0.5 rounded-md text-sm border border-indigo-400  text-indigo-700 bg-transparent hover:bg-gray-50">--}}
-                                                                {{--                                                                      {{ $task->frequency??"" }}--}}
-                                                                {{--                                                                   </span>--}}
-                                                                {{--                                                                </td>--}}
+                                                                <!-- Column -->
+                                                                <td class="px-4 py-1 whitespace-nowrap text-left">
+                                                                 <span class="p-2 inline-flex items-center px-2.5 py-0.5 rounded-md text-sm border border-indigo-400  text-indigo-700 bg-transparent hover:bg-gray-50">
+                                                                       {{ $task->frequency??"" }}
+                                                                       </span>
+                                                                </td>
+                                                                <!-- Column -->
+                                                                <td class="px-4 py-1 whitespace-nowrap text-left">
+                                                                 <span class="p-2 inline-flex items-center px-2.5 py-0.5 rounded-md text-sm border border-indigo-400  text-indigo-700 bg-transparent hover:bg-gray-50">
+                                                                       {{ $task->taskGroup->name??"" }}
+                                                                       </span>
+                                                                </td>
                                                                 <!-- Column -->
                                                                 <td class="px-4 py-1 whitespace-nowrap text-left">
                                                                     <p class="text-sm ring-gray-300">
-                                                                        Due: {{\Carbon\Carbon::parse($task->due_date)->format('d,M,Y')}}</p>
+                                                                        Due Date: {{\Carbon\Carbon::parse($task->due_date)->format('d,M,Y')}}</p>
                                                                 </td>
                                                                 <!-- Column  -->
                                                                 <td class="px-6 py-4 whitespace-nowrap text-right  pl-4">

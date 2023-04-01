@@ -15,9 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::middleware([
     'auth:sanctum',
@@ -27,8 +24,9 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::get('/tasks', TaskList::class)->name('tasks');
 });
 
 
-Route::get('/tasks', TaskList::class)->name('tasks');
-//Route::get('/create-tasks', \App\Http\Livewire\CreateTaskModal::class)->name('create-tasks');
+
+

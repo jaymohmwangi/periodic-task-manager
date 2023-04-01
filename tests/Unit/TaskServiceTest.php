@@ -162,7 +162,7 @@ class TaskServiceTest extends TestCase
         $dueDate = TaskService::getDueDate($startDate, $duration);
 
         // Assert
-        $this->assertEquals('2022-04-08 00:00:00', $dueDate->toDateTimeString());
+        $this->assertEquals('2022-04-08 00:00:00', $dueDate);
     }
 
 

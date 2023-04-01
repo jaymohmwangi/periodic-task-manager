@@ -19,5 +19,6 @@ interface TaskRepository
     public function all(): Collection;
 
     public function delete(Task $task): void;
+
     public function getPendingTasks();
 }
