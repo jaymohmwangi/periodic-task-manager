@@ -3,7 +3,6 @@
 use App\Http\Livewire\CreateTask;
 use App\Http\Livewire\TaskList;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
