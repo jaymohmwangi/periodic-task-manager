@@ -153,7 +153,7 @@
 
     </div>
 </div>
-
+<!-- Create TaskGroup Modal   -->
 <div id="createTaskGroupModal" class="fixed z-10 inset-0 overflow-y-auto hidden">
         <div class="flex items-center justify-center min-h-screen">
             <div class="fixed inset-0 transition-opacity" aria-hidden="true">
@@ -174,11 +174,13 @@
         </div>
     </div>
 <script>
+
+    //open create task group modal
     function openCreateTaskGroupModal() {
         var modal = document.getElementById("createTaskGroupModal");
         modal.classList.remove("hidden");
     }
-
+    //close create task group modal
     function closeCreateTaskGroupModal() {
         var modal = document.getElementById("createTaskGroupModal");
         modal.classList.add("hidden");
