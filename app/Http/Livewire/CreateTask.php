@@ -105,7 +105,7 @@ class CreateTask extends Component
         }
     }
    public function taskCreated(){
-        //send email
+        // send email
    }
 
     public function render()
